@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enhanced Textarea example</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+textarea {
+    width: 30em;
+    height: 16em;
+}
+  </style>
+</head>
+<body>
+  <textarea class="input">
+        Enhanced textarea
+        =================
+
+    * return to insert a newline, keeping
+      indentation of the current line
+    * tab to indent
+    * backspace to unindent spaces next to the
+      caret
+    * shift-tab to unindent the line
+    * selection + tab to indent a block
+    * selection + shift-tab to unindent a block
+    * home to place the caret just after the
+      indentation</textarea>
+  <script src="enhanced-textarea.js"></script>
+  <script>
+(function () {
+  new EnhancedTextarea(document.getElementsByTagName('textarea')[0]);
+}());
+  </script>
+</body>
+</html>
